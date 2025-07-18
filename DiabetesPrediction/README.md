@@ -46,7 +46,7 @@ yarn dev
 By default, the app will run on:
 🔗 http://localhost:5173
 
-🐍 Starting the Backend (Python/Flask)
+# 🐍 Starting the Backend (Python/Flask)
 
 1. Set up Python environment
 2. Install Python dependencies
@@ -63,7 +63,7 @@ python app.py
 By default, Flask will run at:
 🔗 http://localhost:5000
 
-🛠️ Built With
+# 🛠️ Built With
 1. Python
 2. Flask
 3. Scikit-learn
@@ -72,7 +72,7 @@ By default, Flask will run at:
 6. joblib / pickle
 7. React (optional frontend)
 
-## 📝 To Do
+# 📝 To Do
 - Add option to reset the form
 - Connect a basic database to store past predictions
 
