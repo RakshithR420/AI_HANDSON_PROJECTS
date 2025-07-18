@@ -17,7 +17,7 @@ A simple React-based News Recommendation application with a Python (Flask) backe
 ### 1. Clone the Repository
 
 ```
-git clone https://github.com/your-username/NewsRecommendation.git
+git clone https://github.com/RakshithR420/NewsRecommendation.git
 cd NewsRecommendation
 ```
 
