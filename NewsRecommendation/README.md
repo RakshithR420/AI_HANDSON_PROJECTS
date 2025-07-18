@@ -23,7 +23,7 @@ cd NewsRecommendation
 
 # ⚛️ Starting the Frontend (React)
 
-1. Install Node dependencies
+### 1. Install Node dependencies
 Make sure Node.js and npm or yarn are installed.
 
 ```
@@ -45,14 +45,14 @@ By default, the app will run on:
 
 # 🐍 Starting the Backend (Python/Flask)
 
-1. Set up Python environment
-2. Install Python dependencies
+### 1. Set up Python environment
+### 2. Install Python dependencies
 
 ```
 pip install -r requirements.txt
 
 ```
-3. Run the backend server
+### 3. Run the backend server
 ```
 python app.py
 
