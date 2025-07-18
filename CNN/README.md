@@ -20,23 +20,6 @@ This project is a binary image classifier built using **TensorFlow** and **Keras
 - **Google Colab**
 - **OpenCV**, **NumPy**, **Matplotlib**
 
----
-
-## 📂 Dataset Structure
-
-dataset/
-├── apples/
-│ ├── apple1.jpg
-│ └── ...
-└── bananas/
-├── banana1.jpg
-└── ...
-
-
-> The dataset is stored in your Google Drive and loaded via `flow_from_directory`.
-
----
-
 ## 🧪 Model Architecture
 
 - Conv2D → ReLU → MaxPooling
