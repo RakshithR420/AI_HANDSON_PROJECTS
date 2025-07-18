@@ -43,7 +43,7 @@ yarn dev
 By default, the app will run on:
 🔗 http://localhost:5173
 
-🐍 Starting the Backend (Python/Flask)
+# 🐍 Starting the Backend (Python/Flask)
 
 1. Set up Python environment
 2. Install Python dependencies
@@ -62,7 +62,7 @@ By default, Flask will run at:
 
 Make sure your React app fetches from this backend (adjust CORS if needed).
 
-🧾 Usage
+# 🧾 Usage
 Open your browser to http://localhost:5173
 
 Browse dynamically displayed news
@@ -71,7 +71,7 @@ Modify NewsList.jsx or NewsItem.jsx to update behavior or styling
 
 Connect your frontend to the Python backend for dynamic content
 
-🛠️ Built With
+# 🛠️ Built With
 1. React.js
 
 2. Vite (optional bundler)
@@ -82,7 +82,7 @@ Connect your frontend to the Python backend for dynamic content
 
 5. HTML5 / CSS3
 
-📝 To Do
+# 📝 To Do
 1. Add filtering options (category, date, etc.)
 
 2. Integrate a real news API (e.g., NewsAPI, GNews)
