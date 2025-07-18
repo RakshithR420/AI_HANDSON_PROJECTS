@@ -1,55 +1,113 @@
-Apple vs Banana Image Classifier (TensorFlow + Colab Webcam)
-This project builds a binary image classifier using a Convolutional Neural Network (CNN) to distinguish between apples and bananas. It leverages Google Colab for training and real-time prediction using the webcam.
+# 🍎🍌 Apple vs Banana Image Classifier
 
-🚀 Features
-Trains a CNN model using ImageDataGenerator for augmentation and normalization.
+This project is a binary image classifier built using **TensorFlow** and **Keras** that distinguishes between apples and bananas. It supports real-time image capture and prediction using a webcam inside **Google Colab**.
 
-Dataset is loaded from Google Drive.
+---
 
-Webcam integration for live image capture and prediction.
+## 🚀 Features
 
-Model saves and reloads with .h5 format.
+- CNN model using Conv2D, MaxPooling, Flatten, and Dense layers.
+- Real-time webcam integration for capturing and classifying images.
+- Data augmentation and preprocessing with `ImageDataGenerator`.
+- Easy dataset loading from Google Drive.
+- Saves and reloads the trained model (`.h5` format).
 
-Displays processed input and prediction result.
+---
 
-🧠 Tech Stack
-TensorFlow / Keras (for CNN model building and training)
+## 🧠 Tech Stack
 
-Google Colab (notebook execution and webcam support)
+- **TensorFlow / Keras**
+- **Google Colab**
+- **OpenCV**, **NumPy**, **Matplotlib**
 
-OpenCV, NumPy, Matplotlib (image processing and visualization)
+---
 
-📂 Project Structure
-Dataset: Stored in Google Drive in two folders (apples, bananas)
+## 📂 Dataset Structure
 
-Model: Trained CNN with Conv2D, MaxPooling, Dense layers
+dataset/
+├── apples/
+│ ├── apple1.jpg
+│ └── ...
+└── bananas/
+├── banana1.jpg
+└── ...
 
-Webcam Prediction:
 
-Capture photo
+> The dataset is stored in your Google Drive and loaded via `flow_from_directory`.
 
-Preprocess (resize, normalize)
+---
 
-Predict with trained model
+## 🧪 Model Architecture
 
-✅ Run the Model
-Upload your dataset (apples, bananas) to Google Drive.
+- Conv2D → ReLU → MaxPooling
+- Conv2D → ReLU → MaxPooling
+- Flatten → Dense → Sigmoid
 
-Mount drive in Colab.
+---
 
-Train the CNN.
+## 🧾 Usage Steps
 
-Capture a photo using webcam.
+1. Mount your Google Drive in Colab:
+    ```python
+    from google.colab import drive
+    drive.mount('/content/drive')
+    ```
 
-The model will predict whether the image is an apple or banana.
+2. Load dataset using:
+    ```python
+    ImageDataGenerator(rescale=1./255, validation_split=0.2)
+    ```
 
-📌 Output Example
-rust
-Copy
-Edit
+3. Train the model:
+    ```python
+    model.fit(train_generator, epochs=15, validation_data=validation_generator)
+    ```
+
+4. Save the model:
+    ```python
+    model.save("apple_banana_classifier.h5")
+    ```
+
+5. Capture image from webcam:
+    ```python
+    filename = take_photo()
+    ```
+
+6. Preprocess and predict:
+    ```python
+    prediction = model.predict(img_input)
+    ```
+
+---
+
+## ✅ Sample Output
+
 Raw prediction: [[0.968]]
 It's a banana!
-💾 Model
-Saved as: apple_banana_classifier.h5
-Recommended format: my_model.keras
 
+yaml
+Copy
+Edit
+
+---
+
+## 💾 Model Info
+
+- File saved: `apple_banana_classifier.h5`
+- You can also use: `model.save("model.keras")` for newer format.
+
+---
+
+## 📸 Live Demo
+
+Webcam capture is implemented directly in Colab using JavaScript and Python integration. The captured image is resized and passed into the CNN for prediction.
+
+---
+
+## 📌 Notes
+
+- Ensure webcam permissions are granted in Colab.
+- Recommended input image size: **128x128x3**.
+- For best accuracy, use a well-lit environment when capturing photos.
+
+---
