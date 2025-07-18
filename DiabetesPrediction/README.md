@@ -19,11 +19,11 @@ git clone https://github.com/RakshithR420/DiabetesPrediction.git
 cd DiabetesPrediction
 ```
 # 🧠 Model Details
-Trained on a diabetes dataset (e.g., PIMA Indian Diabetes Dataset)
-
-Model is saved using joblib or pickle in model.py
-
-predict() function handles the prediction logic
+- Built a custom `NeuralNetwork` class using pure Python (no high-level ML libraries)
+- Trained on the **PIMA Indian Diabetes Dataset**
+- Model training and logic are encapsulated inside `model.py`
+- Model is saved using `joblib` or `pickle` for reuse
+- The `predict()` function handles prediction logic based on user input
 
 # ⚛️ Starting the Frontend (React)
 1. Install Node dependencies
