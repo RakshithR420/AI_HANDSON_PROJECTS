@@ -60,7 +60,7 @@ By default, the app will run on:
 pip install -r requirements.txt
 
 ```
-3. Train or Lod the model
+3. Train or Load the model
 ```
 python model.py
 ```
