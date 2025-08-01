@@ -7,6 +7,8 @@ from langchain_huggingface import HuggingFaceEmbeddings
 from groq import Groq
 import os
 
+
+
 client = Groq(api_key = os.getenv)
 
 pdf_path = "artificial_intelligence_tutorial.pdf"

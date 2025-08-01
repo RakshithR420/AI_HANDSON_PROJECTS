@@ -2,7 +2,7 @@ import torch
 from transformers import BertModel
 from transformers import BertTokenizer
 import transformers
-from flask import Flask
+from flask import Flask, request, jsonify
 from flask_cors import CORS
 tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
 
@@ -78,8 +78,9 @@ def predict_comment():
             for label,p,score in zip(labels,pred,prob)
         ]
     }
-    for label,p,prob_score in zip(labels,pred,prob):
-        print(f"{label}: {p} (Confidence: {prob_score:.2f})")
+    # for label,p,prob_score in zip(labels,pred,prob):
+    #     print(f"{label}: {p} (Confidence: {prob_score:.2f})")
+    return jsonify(response) 
         
 
 

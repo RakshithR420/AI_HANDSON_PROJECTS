@@ -16,10 +16,9 @@ function App() {
         },
         body: JSON.stringify({ comment }),
       });
-
       if (response.ok) {
         const data = await response.json();
-        setResults(data); // Fixed: was setResult
+        setResults(data.prediction); // Fixed: was setResult
       } else {
         console.error("Error:", response.statusText);
       }
@@ -27,7 +26,6 @@ function App() {
       console.error("Error:", err); // Fixed: was undefined `error`
     }
   };
-
   return (
     <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
       <h2>Toxic Comment Classifier</h2>
@@ -44,13 +42,12 @@ function App() {
       </form>
 
       {results.length > 0 && (
-        <div style={{ marginTop: "1rem" }}>
+        <div style={{textAlign:"left", marginTop: "1rem" }}>
           <h3>Classification Results:</h3>
           <ul>
             {results.map((res, index) => (
               <li key={index}>
-                {res.label}: {res.predicted ? "Toxic" : "Not Toxic"}{" "}
-                (Confidence: {res.prob.toFixed(2)})
+                {res.label}: {res.value === 1 ? "Toxic" : "Not Toxic"} (Confidence: {(res.confidence * 100).toFixed(1)}%)
               </li>
             ))}
           </ul>
